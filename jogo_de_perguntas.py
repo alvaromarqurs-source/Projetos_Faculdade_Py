@@ -1,19 +1,11 @@
 contador = 0 
-resp = input('1- telefonou para vítima? ')
-if resp in 'sS':
-    contador +=1
-resp = input('2- Esteve no local do crime? ')
-if resp in 'sS':
-    contador +=1
-resp = input('3- Mora perto da vitima?')
-if resp in 'sS':
-    contador +=1
-resp = input('4- Devia $$ para a vitima?')
-if resp in 'sS':
-    contador +=1
-resp = input('5- Já trabalhou com a vitima?')
-if resp in 'sS':
-    contador +=1
+perguntas = ['1- telefonou para vítima?','2- Esteve no local do crime? ',
+             '3- Mora perto da vitima?','4- Devia $$ para a vitima?',
+             '5- Já trabalhou com a vitima?']
+for perguntas in perguntas:
+    resp =input(f'{perguntas}')
+    if resp in 'sS':
+        contador += 1
 
 if contador == 2:
     print('Suspeito')
